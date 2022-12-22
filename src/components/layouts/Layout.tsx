@@ -10,14 +10,13 @@ const Layout: React.FunctionComponent<{ children: React.ReactNode }> = ({
 }) => {
   const { theme, colorMode } = useMode();
 
-  useEffect(() => {
-    console.log("====================================");
-    console.log("AA");
-    console.log("====================================");
-  }, [theme]);
-
   return (
-    <ColorModeContext.Provider value={colorMode}>
+    <ColorModeContext.Provider
+      value={{
+        toggleColorMode: colorMode,
+        theme: theme,
+      }}
+    >
       <ThemeProvider theme={theme}>
         <CssBaseline />
 
