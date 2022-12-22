@@ -1,9 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 
 import { ColorModeContext, useMode } from "../../theme";
 import { ThemeProvider } from "@emotion/react";
 import { CssBaseline } from "@mui/material";
+import { ProSidebarProvider } from "react-pro-sidebar";
+
 import Topbar from "../global/Topbar";
+import Sidebar from "../global/Sidebar";
 
 const Layout: React.FunctionComponent<{ children: React.ReactNode }> = ({
   children,
@@ -11,24 +14,27 @@ const Layout: React.FunctionComponent<{ children: React.ReactNode }> = ({
   const { theme, colorMode } = useMode();
 
   return (
-    <ColorModeContext.Provider
-      value={{
-        toggleColorMode: colorMode,
-        theme: theme,
-      }}
-    >
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
+    <ProSidebarProvider>
+      <ColorModeContext.Provider
+        value={{
+          toggleColorMode: colorMode,
+          theme: theme,
+        }}
+      >
+        <ThemeProvider theme={theme}>
+          <CssBaseline />
 
-        {/* Content */}
-        <div className="app">
-          <main className="content">
-            <Topbar />
-            {children}
-          </main>
-        </div>
-      </ThemeProvider>
-    </ColorModeContext.Provider>
+          {/* Content */}
+          <div className="flex min-h-screen">
+            <Sidebar />
+            <main className="w-full h-full">
+              <Topbar />
+              {children}
+            </main>
+          </div>
+        </ThemeProvider>
+      </ColorModeContext.Provider>
+    </ProSidebarProvider>
   );
 };
 

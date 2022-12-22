@@ -13,3 +13,4 @@ Next.js + TailwindCSS + MaterialUIを利用したテンプレート。
 - [yup](https://www.npmjs.com/package/yup)
 - [FullCalendar](https://www.npmjs.com/package/@fullcalendar/react)
 - [nibo](https://nivo.rocks/)
+- [react-pro-sidebar](https://www.npmjs.com/package/react-pro-sidebar)

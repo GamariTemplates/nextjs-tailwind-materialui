@@ -6,9 +6,6 @@ import { PaletteMode } from "@mui/material";
  * 色。
  */
 export const tokens = (mode: PaletteMode | undefined) => {
-
-    console.log(mode, mode == "dark");
-
     return ({
         ...(mode === "dark"
             ? {
@@ -220,10 +217,7 @@ export const useMode = () => {
 
     const colorMode = () => setMode((prev) => (prev === "light" ? "dark" : "light"))
 
-    const theme = useMemo(() => {
-        console.log("CHANGE theme", mode);
-        return createTheme(themeSettings(mode))
-    }, [mode]);
+    const theme = useMemo(() => createTheme(themeSettings(mode)), [mode]);
 
     return {
         mode, theme, colorMode,
