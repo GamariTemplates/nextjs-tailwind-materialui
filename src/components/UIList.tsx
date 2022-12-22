@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 import {
+  Box,
   Button,
   Card,
   CardActions,
@@ -12,11 +13,12 @@ import {
 const UIList = () => {
   return (
     <div>
-      <div className="mb-10">
-        <h2 className="text-xl font-bold">ボタン</h2>
-
-        <Button variant="contained">click me!</Button>
-      </div>
+      <Box>
+        <Typography variant="h4">ボタン</Typography>
+        <Box p={4}>
+          <Button variant="contained">click me!</Button>
+        </Box>
+      </Box>
 
       <div className="mb-10">
         <div className="w-24">

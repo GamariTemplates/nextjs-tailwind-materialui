@@ -1,5 +1,7 @@
+import { Box, Typography } from "@mui/material";
 import type { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 import ColorPalette from "../components/ColorPalette";
 
 import Header from "../components/Header";
@@ -17,6 +19,12 @@ const Home: NextPage = () => {
 
       <Header />
       <main className="flex flex-col w-full h-screen px-6 pt-10 mx-auto max-w-7xl">
+        <Box>
+          <Typography variant="h4">リンク</Typography>
+          <Box p={4}>
+            <Link href="/dashboard">Dashboard</Link>
+          </Box>
+        </Box>
         <UIList />
         <ColorPalette />
       </main>
