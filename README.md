@@ -1,13 +1,8 @@
 # 概要
 
-Next.jsを利用したクローンアプリケーション。
+Next.js + TailwindCSS + MaterialUIを利用したテンプレート。
 
-## 制作したアプリ
-
-- [wip] Airbnb
-- [ ] Twitter
-- [ ] Youtube
-- [ ] Instagram
+サンプルのダッシュボードアプリケーションをつけている。
 
 ## 利用技術
 
@@ -19,4 +14,3 @@ Next.jsを利用したクローンアプリケーション。
 - [FullCalendar](https://www.npmjs.com/package/@fullcalendar/react)
 - [nibo](https://nivo.rocks/)
 - [react-pro-sidebar](https://www.npmjs.com/package/react-pro-sidebar)
-
