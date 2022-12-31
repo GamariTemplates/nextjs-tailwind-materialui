@@ -1,6 +1,6 @@
 # 概要
 
-Next.js + TailwindCSS + MaterialUIを利用したテンプレート。
+Next.js + TailwindCSS + MaterialUI を利用したテンプレート。
 
 サンプルのダッシュボードアプリケーションをつけている。
 
@@ -14,3 +14,26 @@ Next.js + TailwindCSS + MaterialUIを利用したテンプレート。
 - [FullCalendar](https://www.npmjs.com/package/@fullcalendar/react)
 - [nibo](https://nivo.rocks/)
 - [react-pro-sidebar](https://www.npmjs.com/package/react-pro-sidebar)
+
+## コマンド
+
+npm run dev
+
+npm run storybook
+
+## StoryBook
+
+### プロジェクト構成
+
+- .storybook
+-
+
+### 実行
+
+npm run storybook
+
+### 参考
+
+https://reffect.co.jp/react/next-js-12-storybook
+
+### 追加手順
